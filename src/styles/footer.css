@@ -1,0 +1,22 @@
+.footer-top {
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #e4e7ec;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.footer-top img {
+    width: 20px;
+}
+
+.footer-bottom {
+    background: #002b6b;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 13px;
+}
