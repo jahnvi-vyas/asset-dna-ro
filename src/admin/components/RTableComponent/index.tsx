@@ -3,11 +3,11 @@ import { Table, Tag } from 'antd';
 
 const columns = [
     {
-        title: 'Ticket ID',
+        title: 'Request ID',
         dataIndex: 'ticket'
     },
     {
-        title: 'Machine ID',
+        title: 'RO ID',
         dataIndex: 'machine'
     },
     {
@@ -15,15 +15,22 @@ const columns = [
         dataIndex: 'customer'
     },
     {
-        title: 'Status',
-        dataIndex: 'status',
-        render: (status: string) => (
-            <Tag color="green">{status}</Tag>
-        )
+        title: 'Service Type',
+        dataIndex: 'service'
     },
     {
-        title: 'Priority',
-        dataIndex: 'priority'
+        title: 'Status',
+        dataIndex: 'status',
+        render: (status: string) => {
+            const color =
+                status === 'Completed'
+                    ? 'green'
+                    : status === 'In Progress'
+                        ? 'processing'
+                        : 'orange';
+
+            return <Tag color={color}>{status}</Tag>;
+        }
     },
     {
         title: 'Date',
@@ -35,20 +42,29 @@ const data = [
     {
         key: 1,
         ticket: 'SRV-2026-001',
-        machine: 'IMCR-001',
-        customer: 'ABC Pharma',
-        status: 'Open',
-        priority: 'High',
-        date: '12 May 2026'
+        machine: 'RO-001',
+        customer: 'Dhaval Vyas',
+        service: 'RO Membrane Replacement',
+        status: 'Completed',
+        date: '12 Jun 2026'
     },
     {
         key: 2,
         ticket: 'SRV-2026-002',
-        machine: 'PRM-007',
-        customer: 'XYZ Industries',
-        status: 'Assigned',
-        priority: 'Medium',
-        date: '11 May 2026'
+        machine: 'RO-008',
+        customer: 'Neha Patel',
+        service: 'Sediment Filter Replacement',
+        status: 'Pending',
+        date: '15 Jun 2026'
+    },
+    {
+        key: 3,
+        ticket: 'SRV-2026-003',
+        machine: 'RO-015',
+        customer: 'Rahul Shah',
+        service: 'TDS & pH Calibration',
+        status: 'In Progress',
+        date: '17 Jun 2026'
     }
 ];
 

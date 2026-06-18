@@ -2,19 +2,22 @@ import React from 'react'
 
 const maintenanceData = [
     {
-        machine: 'IMCR-001 - Auto Corner Sealer Machine',
-        company: 'ABC Pharma',
-        date: '20 May 2026'
+        machine: 'RO-001 - Aquatec Plus Smart Pure',
+        customer: 'Dhaval Jagdishbhai Vyas',
+        service: 'Filter Replacement',
+        date: '20 Jun 2026'
     },
     {
-        machine: 'PRM-007 - Bottle Filling Machine',
-        company: 'XYZ Industries',
-        date: '22 May 2026'
+        machine: 'RO-008 - Aquatec Plus Smart Pure',
+        customer: 'Neha Patel',
+        service: 'RO Membrane Replacement',
+        date: '22 Jun 2026'
     },
     {
-        machine: 'PRM-012 - Labeling Machine',
-        company: 'Sunrise Pharma',
-        date: '25 May 2026'
+        machine: 'RO-015 - Aquatec Plus Smart Pure',
+        customer: 'Rahul Shah',
+        service: 'Preventive Maintenance',
+        date: '25 Jun 2026'
     }
 ];
 
@@ -22,7 +25,7 @@ const UMaintenanceComponent = () => {
     return (
         <div className="maintenance-card">
             <div className="table-title">
-                Upcoming Maintenance
+                Upcoming Service Schedule
             </div>
 
             {maintenanceData.map((item, index) => (
@@ -30,7 +33,9 @@ const UMaintenanceComponent = () => {
                     <div>
                         <h4>{item.machine}</h4>
 
-                        <p>{item.company}</p>
+                        <p>{item.customer}</p>
+
+                        <small>{item.service}</small>
                     </div>
 
                     <span>{item.date}</span>

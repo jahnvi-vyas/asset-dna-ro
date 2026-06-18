@@ -1,31 +1,31 @@
-import React from 'react'
+import React from 'react';
 import {
     AppstoreOutlined,
     ToolOutlined,
     TeamOutlined,
-    CalendarOutlined
+    SafetyCertificateOutlined
 } from '@ant-design/icons';
 
 const cards = [
     {
-        title: 'Total Machines',
+        title: 'Installed RO Units',
         value: 128,
         icon: <AppstoreOutlined />
     },
     {
-        title: 'Open Tickets',
+        title: 'Open Service Requests',
         value: 14,
         icon: <ToolOutlined />
     },
     {
-        title: 'Total Customers',
-        value: 42,
+        title: 'Registered Customers',
+        value: 96,
         icon: <TeamOutlined />
     },
     {
-        title: 'Expiring AMC',
-        value: 8,
-        icon: <CalendarOutlined />
+        title: 'Active Warranties',
+        value: 102,
+        icon: <SafetyCertificateOutlined />
     }
 ];
 
@@ -36,7 +36,6 @@ const DCardsComponent = () => {
                 <div className="dashboard-card" key={index}>
                     <div>
                         <p>{item.title}</p>
-
                         <h2>{item.value}</h2>
                     </div>
 
@@ -49,4 +48,4 @@ const DCardsComponent = () => {
     );
 };
 
-export default DCardsComponent
+export default DCardsComponent;
