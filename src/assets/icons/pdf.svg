@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#EF4444"/>
+  <path d="M15 12h12l6 6v18H15V12z" fill="white"/>
+  <path d="M27 12v6h6" fill="#FCA5A5"/>
+  <text x="24" y="33" text-anchor="middle" font-size="10" fill="#EF4444" font-family="Arial" font-weight="bold">
+    PDF
+  </text>
+</svg>
